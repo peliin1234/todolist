@@ -1,0 +1,28 @@
+﻿@model todolist.Models.datatodo
+@{
+    ViewData["Title"] = "KayitGetir";
+    Layout = "~/Views/Shared/_HomePageLayout.cshtml";
+}
+
+@using (Html.BeginForm("KayitGüncelle", "datatos", FormMethod.Post))
+{
+     <b>Id</b>
+    <br />
+    @Html.TextAreaFor(x=>x.Id, new {@class= "form-control"})
+    <br />
+    <b>Görev</b>
+    <br />
+    @Html.TextAreaFor(x=>x.Donote, new {@class= "form-control"})
+    <br />
+    <b>Tarih</b>
+    <br />
+    @Html.EditorFor(x => x.Datetime, new { htmlAttributes = new { @class = "form-control" } })
+<script>
+  $( function() {
+      $("#Date").datepicker({ dateFormat:"dd / mm / yy"});
+  } );
+</script>
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+}
+

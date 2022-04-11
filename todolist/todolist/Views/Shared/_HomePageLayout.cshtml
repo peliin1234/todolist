@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<title>TodoList</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel ="stylesheet"/>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-khaki w3-bar-block" style="width:15%">
+  <h3 class="w3-bar-item">Menu</h3>
+   <a href="/datatos/Index" class="w3-bar-item w3-button">Anasayfa</a>
+  <a href="/datatos/Haftalık" class="w3-bar-item w3-button">Haftalık Yapılacaklar Listesi</a>
+  <a href="/datatos/Aylık" class="w3-bar-item w3-button">Aylık Yapılacaklar Listesi</a>
+  <a href="/datatos/Yıllık" class="w3-bar-item w3-button">Yıllık Yapılacaklar Listem</a>
+  <a href="/datatos/YeniKayit" class="w3-bar-item w3-button">Yeni Bir Kayıt Oluştur</a>
+</div>
+<!-- Page Content -->
+<div style="margin-left:15%">
+<div class="w3-container w3-brown">
+  <h1>TodoList</h1>
+</div>
+<div class="w3-container">
+@RenderBody()
+</div>
+</div>  
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_HomePageLayout.cshtml";
+}
+
+<br />
+<h2>Tüm Kayıtlar</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th> id </th>
+        <th> Yapılacaklar </th>
+        <th> Tarih </th>
+    </tr>
+    @foreach (var x in Model)
+   {
+    <tr>
+        <td>@x.Id</td>
+        <td>@x.Donote</td>
+        <td>@x.Datetime</td>
+        <td><a href ="/datatos/KayitSil/@x.Id" class="btn btn-danger">Sil</a> </td>
+        <td><a href ="/datatos/KayitGetir/@x.Id" class="btn btn-success">Güncelle</a> </td>
+
+    </tr>
+   }
+   
+</table>
